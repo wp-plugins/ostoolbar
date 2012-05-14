@@ -2,8 +2,9 @@
 
 class OST_Controller
 {
+	
 
-	public function action_tutorials()
+	public function action_tutorials($isFrontend = false)
 	{
 		if ($id = (int)$_GET['id'])
 		{
@@ -50,7 +51,7 @@ class OST_Controller
 						}
 						?>
 						<tr>
-							<td><a href="<?php echo $tutorials[$i]->link;?>">
+							<td><a href="<?php echo ($isFrontend ?  "index.php?page_id=".$_GET["page_id"]."&id=".$tutorials[$i]->id : $tutorials[$i]->link);?>">
 								<?php echo $tutorials[$i]->title; ?></a>
 							</td>
 							<td><?php echo $tutorials[$i]->ostcat_name; ?></td>
@@ -80,7 +81,7 @@ class OST_Controller
 		?>
 		<div class="wrap">
 			<?php if (in_array($tutorial->jversion, array("wp_trial"))):?>
-                <iframe src="http://www.ostraining.com/services/adv/adv1.html" width="734px" height="80px"></iframe>
+                <iframe src="http://www.ostraining.com/services/adv/adv1.html" width="734px" height="80px" style="overflow:visible"></iframe>
             <?php endif;?>
         
 			<h2><?php echo $tutorial->title?></h2>

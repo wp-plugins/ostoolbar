@@ -5,6 +5,8 @@ class OST_Application
 
 	public function init()
 	{
+		add_shortcode("ostoolbar", array("OST_Application", "display"));
+		
 		get_role('administrator')->add_cap( 'see_videos' );
 		$text = get_option('toolbar_permission');
 		if ($text == "")
@@ -26,6 +28,46 @@ class OST_Application
 		if ($_GET['page'] == 'ostoolbar') {
 			add_action('admin_notices', array($this, 'api_key_check'));
 		}
+		add_action('init', array($this, 'ostoolbar_add_editor_button'));
+	}
+	
+	function display()
+	{
+		ob_start();
+		if (!$_GET["id"])
+			OST_Controller::action_tutorials(true);
+		else
+			OST_Controller::action_tutorial($_GET["id"]);
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
+	}
+
+	function ostoolbar_add_editor_button() {
+		if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') )
+			return;
+			
+		if ( get_user_option('rich_editing') == 'true') {
+			add_filter("mce_external_plugins", array($this, "ostoolbar_load_plugin"));
+			add_filter('mce_buttons', array($this, 'ostoolbar_register_button'));
+		}
+	} 
+	
+	// ---
+	function ostoolbar_load_plugin($plugin_array) {
+		$plug = plugins_url('mce/editor_plugin.js',__FILE__);
+		$plugin_array['ostoolbar_plugin'] = $plug;
+		return $plugin_array;
+	}
+	
+	// ---
+	function ostoolbar_register_button($buttons) {
+		$b[] = "separator";
+		$b[] = "ostoolbar_plugin_button";
+		if ( is_array($buttons) && !empty($buttons) ) {
+			$b = array_merge( $buttons, $b );
+		}
+		return $b;
 	}
 
 	public function api_key_check() {
