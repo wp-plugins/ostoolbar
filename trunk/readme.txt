@@ -59,3 +59,7 @@ Yes, the plugin is released under the GPL license and you can install it on as m
 * Added front-end viewing of the videos via a button in the editor
 * Jumped version numbers from 1.0 to 2.2 in order to match our current version, not the one set by WordPress.org
 
+== Screenshots ==
+
+1. Tutorial list
+2. Training video
