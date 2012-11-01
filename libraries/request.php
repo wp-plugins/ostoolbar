@@ -16,7 +16,7 @@ class OST_RequestHelper {
 	
 		
 		$static_data	= array(
-							'output' 	=> 'json',
+							'format' 	=> 'json',
 							'key'		=> $api_key
 						);
 						

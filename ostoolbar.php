@@ -1,7 +1,7 @@
 <?php
 /**
  * @package OSToolbar
- * @version 2.2
+ * @version 2.3
  */
 /*
 Plugin Name: OSToolbar
