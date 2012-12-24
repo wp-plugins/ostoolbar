@@ -31,6 +31,25 @@ class OSTModel_Tutorials extends OST_Model {
 	*/
 	public function getList() {
 		$data = OST_Cache::callback($this, '_fetchList', array(), null, true);
+
+		$videos = preg_split("/,/", get_option('videos'), -1, PREG_SPLIT_NO_EMPTY);
+		if (count($videos))
+		{
+			$temp = array();
+			foreach ($videos as $item)
+			{
+				foreach ($data as $row)
+				{
+					if ($row->id == $item)
+					{
+						$temp[] = $row;
+						break;
+					}
+				}
+			}
+			$data = $temp;
+		}
+
 		return $data;
 	}
 		
