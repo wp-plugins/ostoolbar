@@ -139,6 +139,8 @@ class OST_Configuration
 		endfor;
 		
 		$videos = preg_split("/,/", get_option('videos'), -1, PREG_SPLIT_NO_EMPTY);
+		
+
 
 		?>
         	<script>
@@ -198,6 +200,24 @@ class OST_Configuration
                     <?php endforeach;?>
                 </ul>
             	<div style="float:left; width:50px; margin-right:20px;"><?php echo(__("Drag and drop the videos to choose which ones will show to users"));?></div>
+                <?php
+				if (count($videos))
+				{
+					$temp = array();
+					foreach ($videos as $item)
+					{
+						foreach ($list as $row)
+						{
+							if ($row->id == $item)
+							{
+								$temp[] = $row;
+								break;
+							}
+						}
+					}
+					$list = $temp;
+				}
+				?>
                 <ul id="sortable2" class="connectedSortable">
                 	<?php foreach ($list as $item):?>
                     	<?php 

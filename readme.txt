@@ -61,3 +61,6 @@ Yes, the plugin is released under the GPL license and you can install it on as m
 
 == 2.3 ==
 * Fix bug to list video work with new API.
+
+== 2.4 ==
+* Fix ordering of videos.

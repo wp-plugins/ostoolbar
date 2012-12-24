@@ -1,14 +1,14 @@
 <?php
 /**
  * @package OSToolbar
- * @version 2.3
+ * @version 2.4
  */
 /*
 Plugin Name: OSToolbar
 Plugin URI: http://www.ostraining.com/joomla-ostoolbar/
 Description: This plugin shows training videos inside your WordPress admin panel.
 Author: OSTraining.com
-Version: 2.3
+Version: 2.4
 Author URI: http://www.ostraining.com
 */
 
