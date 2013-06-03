@@ -106,7 +106,7 @@ class OST_Controller
 	public function action_configuration()
 	{
 		wp_deregister_script( 'jquery_ui' );
-		wp_register_script( 'jquery_ui', plugins_url('assets/js/jquery-ui-1.8.6.custom.min.js', __FILE__));
+		wp_register_script( 'jquery_ui', plugins_url('assets/js/jquery-ui-1.10.3.custom.min.js', __FILE__));
 		wp_enqueue_script( 'jquery_ui' );
 
 		wp_deregister_style( 'jquery_ui_css' );
