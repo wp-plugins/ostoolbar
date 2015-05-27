@@ -1,8 +1,9 @@
 === Plugin Name ===
 Contributors: alledia
 Tags: video, tutorials, help, support, documentation
-Requires at least: 3.0
-Tested up to: 3.5.1
+Requires at least: 4.0
+Tested up to: 4.3
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,13 +23,10 @@ There is also a Pro version available. Features include:
 2. Choose which videos to show
 3. Choose what order the videos appear in
 4. Choose which users can see the videos
-5. Show the videos on the fronted of your site
-6. Whitelabel the plugin. Add your company name and logo.
-
 
 == Installation ==
 
-1. Istall OSToolbar either via the WordPress.org plugin directory, or by uploading the files to your server
+1. Install OSToolbar either via the WordPress.org plugin directory, or by uploading the files to your server
 2. Click the Activate button.
 3. Visit the OSToolbar link in your WordPress admin menu and start watching videos.
 
@@ -38,13 +36,6 @@ There is also a Pro version available. Features include:
 
 Yes, the plugin is released under the GPL license and you can install it on as many sites as wish.
 
-= How Do I Show These Videos on the Front of My Site? =
-
-1. Go to a post or page.
-2. There will be an OSToolbar button in the editor. Click that button.
-3. The button will insert this code into your content [ostoolbar]
-4. Save and you're done!
-
 == Screenshots ==
 
 1. The list of videos in your WordPress admin panel.
@@ -52,18 +43,30 @@ Yes, the plugin is released under the GPL license and you can install it on as m
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Initial Launch
 
-= 2.2 =
+= 2.2.0 =
 * Added front-end viewing of the videos via a button in the editor
 * Jumped version numbers from 1.0 to 2.2 in order to match our current version, not the one set by WordPress.org
 
-== 2.3 ==
+= 2.3.0 =
 * Fix bug to list video work with new API.
 
-== 2.4 ==
+= 2.4.0 =
 * Fix ordering of videos.
 
-== 2.5 ==
+= 2.5.0 =
 * Upgrade JQuery UI to fix arranging video.
+
+= 3.0.0 =
+* Upgrade/refactoring for compatibility with WP 4.x
+
+= 3.0.1 =
+* Remove obsolete code
+* Update icons
+
+== Upgrade Notice ==
+
+= 3.0.0 =
+Previous versions did not work in latest WordPress anymore

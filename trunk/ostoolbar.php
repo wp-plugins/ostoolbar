@@ -1,31 +1,30 @@
 <?php
-/**
- * @package OSToolbar
- * @version 2.5
- */
 /*
 Plugin Name: OSToolbar
-Plugin URI: http://www.ostraining.com/joomla-ostoolbar/
+Plugin URI: http://www.ostraining.com/ostoolbar/
 Description: This plugin shows training videos inside your WordPress admin panel.
 Author: OSTraining.com
-Version: 2.5
+Version: 3.0.1
 Author URI: http://www.ostraining.com
 */
+/**
+ * @package    OSToolbar-WP
+ * @contact    www.alledia.com, support@alledia.com
+ * @copyright  2015 Alledia.com, All rights reserved
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
 
+defined('ABSPATH') or die();
 
-require_once(dirname(__FILE__).'/libraries/factory.php');
-require_once(dirname(__FILE__).'/libraries/configuration.php');
-require_once(dirname(__FILE__).'/libraries/application.php');
-require_once(dirname(__FILE__).'/libraries/model.php');
-require_once(dirname(__FILE__).'/libraries/cache.php');
-require_once(dirname(__FILE__).'/libraries/request.php');
-require_once(dirname(__FILE__).'/libraries/rest.php');
-require_once(dirname(__FILE__).'/models/tutorial.php');
-require_once(dirname(__FILE__).'/models/tutorials.php');
-require_once(dirname(__FILE__).'/models/help.php');
-require_once(dirname(__FILE__).'/models/helppage.php');
-require_once(dirname(__FILE__).'/controller.php');
+if (!defined('OSTOOLBAR_VERSION')) {
+    define('OSTOOLBAR_VERSION', '3.0.1');
+    define('OSTOOLBAR_BASE', __DIR__);
+    define('OSTOOLBAR_LIBRARY', OSTOOLBAR_BASE . '/library');
+    define('OSTOOLBAR_ASSETS', OSTOOLBAR_BASE . '/assets');
+    define('OSTOOLBAR_IMAGES', OSTOOLBAR_ASSETS . '/images');
 
+    require_once OSTOOLBAR_LIBRARY . '/ostoolbar/Loader.php';
+    Ostoolbar\Loader::register('Ostoolbar', OSTOOLBAR_LIBRARY . '/ostoolbar');
+}
 
-$app = OST_Factory::getInstance('OST_Application');
-$app->init();
+Ostoolbar\Factory::getApplication()->init();
