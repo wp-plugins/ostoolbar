@@ -1,0 +1,57 @@
+.sortable-holder .sortable-header {
+    float: left;
+    width: 300px;
+    padding-right: 90px;
+}
+
+.sortable-holder .sortable-divider {
+    float: left;
+    width: 50px;
+    margin-right: 20px;
+}
+
+#sortable1, #sortable2 {
+    width: 295px;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid #dedede;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#sortable1 {
+    margin-right: 15px;
+}
+
+#sortable1 li, #sortable2 li {
+    padding: 5px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#toplevel_page_ostoolbare,
+#toplevel_page_ostoolbar .dashicons-admin-generic::before {
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+}
+
+#toplevel_page_ostoolbar .dashicons-admin-generic::before,
+#toplevel_page_ostoolbar .current .dashicons-admin-generic::before {
+    background-image: url(../images/ost_icon.png);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    background-size: 100% auto;
+    content: " ";
+}
+
+#toplevel_page_ostoolbar:hover .wp-not-current-submenu .dashicons-admin-generic::before {
+    background-position: 0 -33px;
+}
