@@ -38,7 +38,7 @@ class Controller
                 if ($apikey) {
                     echo '<div class="error">'
                         . 'Your API key is invalid. Please enter an API key in'
-                        . ' <a href="options-general.php?page=options-ostoolbar">OSToolbar settings</a>.'
+                        . ' <a href="options-general.php?page=ostoolbar_options">OSToolbar settings</a>.'
                         . '</div>';
                 }
             }
