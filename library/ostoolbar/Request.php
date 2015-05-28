@@ -43,7 +43,7 @@ abstract class Request
         $response = Rest\Request::send(
             static::getHostUrl(),
             $data,
-            'POST',
+            'GET',
             array(
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_MAXREDIRS      => 1,

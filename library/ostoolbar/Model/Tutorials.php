@@ -25,7 +25,7 @@ class Tutorials extends Model
 
     public function getList()
     {
-        $data = Cache::callback($this, 'fetchList', array(), null, true);
+        $data = Cache::callback($this, 'fetchList', array(), null);
 
         $videos = preg_split("/,/", get_option('ostoolbar_videos'), -1, PREG_SPLIT_NO_EMPTY);
         if (count($videos)) {
@@ -56,8 +56,8 @@ class Tutorials extends Model
 
         $list = $response->getBody();
 
-        for ($i = 0; $i < count($list); $i++) {
-            $list[$i]->link = 'admin.php?page=ostoolbar&id=' . $list[$i]->id;
+        foreach ($list as $item) {
+            $item->link = 'admin.php?page=ostoolbar&id=' . $item->id;
         }
 
         return $list;

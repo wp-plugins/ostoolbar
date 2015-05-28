@@ -66,7 +66,6 @@ Yes, the plugin is released under the GPL license and you can install it on as m
 * Remove obsolete code
 * Update icons
 
-== Upgrade Notice ==
-
-= 3.0.0 =
-Previous versions did not work in latest WordPress anymore
+= 3.0.2 =
+* Minor code clean-up
+* Fix a link to settings page
