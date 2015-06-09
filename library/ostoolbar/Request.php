@@ -68,14 +68,4 @@ abstract class Request
 
         return $response;
     }
-
-    public static function filter($text)
-    {
-        $split  = explode('index.php', static::getHostUrl());
-        $ostUrl = $split[0];
-
-        $text = preg_replace('#(href|src)="([^:"]*)("|(?:(?:%20|\s|\+)[^"]*"))#', '$1="' . $ostUrl . '$2$3', $text);
-
-        return $text;
-    }
 }

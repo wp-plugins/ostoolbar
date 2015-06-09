@@ -4,7 +4,7 @@ Plugin Name: OSToolbar
 Plugin URI: http://www.ostraining.com/ostoolbar/
 Description: This plugin shows training videos inside your WordPress admin panel.
 Author: OSTraining.com
-Version: 3.0.2
+Version: 3.0.3
 Author URI: http://www.ostraining.com
 */
 /**

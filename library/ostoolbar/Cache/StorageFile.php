@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        $Id$
+ * @version        $Id: file.php 20228 2011-01-10 00:52:54Z eddieajau $
  * @package        Joomla.Framework
  * @subpackage     Cache
  * @copyright      Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.

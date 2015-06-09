@@ -26,9 +26,6 @@ class Tutorial extends Model
         if (is_array($tutorials)) {
             foreach ($tutorials as $tutorial) {
                 if ($tutorial->id == $id) {
-                    $tutorial->introtext = Request::filter($tutorial->introtext);
-                    $tutorial->fulltext  = Request::filter($tutorial->fulltext);
-
                     $this->data = $tutorial;
                     break;
                 }

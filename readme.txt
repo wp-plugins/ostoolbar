@@ -69,3 +69,6 @@ Yes, the plugin is released under the GPL license and you can install it on as m
 = 3.0.2 =
 * Minor code clean-up
 * Fix a link to settings page
+
+= 3.0.3 =
+* Fix a problem with urls to videos
